@@ -41,8 +41,8 @@ ________                          _______________                             __
    |                                     |-------------------------------------->|
    |                                     | Enregistrer l'alias et l'url en BDD   |
    |                                     |                                       |
-   |<------------------------------------|
-   | Retourne l'url raccourie            |
+   |<------------------------------------|                                       |
+   | Retourne l'url raccourie            |                                       |
 ```
 
 ### Redirection
