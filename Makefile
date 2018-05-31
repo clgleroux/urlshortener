@@ -4,7 +4,7 @@ venv:
 update:
 	./my_venv/bin/pip install -U -r requierements.txt
 
-install: venv update
+install: venv update migrate
 
 test:
 	cd ./urlshortener && ../my_venv/bin/python ./manage.py test
