@@ -27,3 +27,6 @@ class URL(models.Model):
 
         # Return current instance, hope it will be usefull :D
         return obj
+
+class NAME(models.Model):
+    name = models.TextField()

@@ -16,8 +16,16 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from shortener.views import simple
+from shortener.views import get_name
+from shortener.views import clement
+from shortener.views import thk
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', simple),
+    url(r'^hello/', simple),
+    url(r'^name/', get_name),
+    url(r'^your-name/', get_name),
+    url(r'^thanks/', clement),
+    url(r'^$', clement),
 ]
