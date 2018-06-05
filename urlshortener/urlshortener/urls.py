@@ -20,6 +20,7 @@ from shortener.views import get_name
 from shortener.views import clement
 from shortener.views import thk
 from shortener.views import get_url
+from shortener.views import tstCss
 
 
 
@@ -30,7 +31,5 @@ urlpatterns = [
     url(r'^your-name/', get_name),
     url(r'^urlAlias/', get_url),
     url(r'^thanks/', clement),
-    url(r'^$', clement),
-
-
+    url(r'^$', tstCss),
 ]
