@@ -9,7 +9,7 @@ from django.http import HttpResponse
 
 from .models import URL
 
-from .forms import NameForm
+
 from .forms import UrlForm
 
 

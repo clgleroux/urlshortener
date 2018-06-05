@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from shortener.views import (
-    simple, get_name, clement, thk, get_url, tstCss, get_alias, error_404,
+    get_url, get_alias, error_404,
 )
 from django.views.generic import RedirectView
 
