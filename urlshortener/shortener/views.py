@@ -17,33 +17,6 @@ def error_404(request):
     data = {}
     return render(request,'shortener/error_404.html', data)
 
-
-def simple(request):
-    return render(request, "shortener/hello.html", {'name': 'Buddy'})
-
-
-def clement(request):
-    return render(request, "shortener/clem.html", {'nom': 'Clem', 'yourname': request.GET.get('nom', 'buddy')})
-
-
-def thk(request):
-    return render(request, "shortener/thk.html")
-
-
-def get_name(request):
-    # import pdb; pdb.set_trace()
-    if request.method == 'POST':
-        form = NameForm(request.POST)
-
-        if form.is_valid():
-            # Enregister le formulaire correct
-            return HttpResponseRedirect('/thanks/?' +  'nom=' + request.POST.get('your_name'))
-    else:
-        form = NameForm()
-
-    return render(request, 'shortener/name.html', {'form': form})
-
-
 def get_url(request):
     #import pdb; pdb.set_trace()
     if request.method == 'POST':
@@ -67,7 +40,3 @@ def get_url(request):
 def get_alias(request, alias):
     foo = get_object_or_404(URL, alias=alias).url
     return redirect(foo)
-
-
-def tstCss(request):
-    return render(request, "shortener/testCss.html")
