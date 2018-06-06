@@ -27,5 +27,3 @@ class URL(models.Model):
 
         # Return current instance, hope it will be usefull :D
         return obj
-
-

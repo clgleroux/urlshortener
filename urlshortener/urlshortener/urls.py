@@ -18,20 +18,12 @@ from django.contrib import admin
 from shortener.views import (
     get_url, get_alias, error_404,
 )
-from django.views.generic import RedirectView
-
-
-from shortener import views as shortener_views
-from django.conf.urls import handler404, handler500
-
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    # url(r'^shortener/', include('shortener.urls', namespace='shortener')),
-    url(r'^$', get_url),
-    url(r'^urlAlias/', get_url),
-    url(r'^(?P<alias>[a-z A-Z 0-9]{4})/$', get_alias),    
-    url(r'^favicon\.ico$',RedirectView.as_view(url='../shortener/static/shortener/favicon.ico')),
+    url(r'^$', get_url, name="url-form"),
+    url(r'^(?P<alias>[a-z A-Z 0-9]{4})/$', get_alias, name="redirect"),
+    url(r'^404/$', error_404, name="error-404")
 
 ]
 handler404 = error_404
