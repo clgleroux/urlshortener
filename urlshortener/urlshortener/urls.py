@@ -29,6 +29,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     # url(r'^shortener/', include('shortener.urls', namespace='shortener')),
     url(r'^$', get_url),
+    url(r'^urlAlias/', get_url),
     url(r'^(?P<alias>[a-z A-Z 0-9]{4})/$', get_alias),    
     url(r'^favicon\.ico$',RedirectView.as_view(url='../shortener/static/shortener/favicon.ico')),
 
