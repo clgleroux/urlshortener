@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.conf.urls.static import static
+from django.conf import settings
 from shortener.views import (
     get_url, get_alias, error_404,
 )
@@ -29,9 +31,11 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     # url(r'^shortener/', include('shortener.urls', namespace='shortener')),
     url(r'^$', get_url),
+    url(r'^404/$', error_404),
     url(r'^urlAlias/', get_url),
     url(r'^(?P<alias>[a-z A-Z 0-9]{4})/$', get_alias),    
     url(r'^favicon\.ico$',RedirectView.as_view(url='../shortener/static/shortener/favicon.ico')),
 
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
 handler404 = error_404

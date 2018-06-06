@@ -2,10 +2,6 @@ html, body {
 	background-color: #1C2326;
 	padding: 0;
 	margin: 0;
-	-moz-user-select: none; /* Firefox */
-	-webkit-user-select: none; /* Chrome, Safari, Opéra depuis la version 15 */
-	-ms-user-select: none; /* Internet explorer depuis la version 10 et Edge */
-	user-select: none; /* Propriété standard */
 }
 
 h1 {
@@ -41,28 +37,6 @@ input[type=submit]:hover {
 }
 
 #er404 {
-	margin: 0;
-	padding: 0;
-	margin-top: 10%;
-}
-
-h6, h3 {
-	color: white;
+	background-color: red;
 	text-align: center;
-	font-family: 'Kalam', cursive;
-	margin: 0;
-}
-
-h3 {
-	font-size: 3vw;
-}
-
-h6 a, h6 a:visited {
-	color: white;
-	text-decoration: none;
-}
-
-h6 a:hover {
-	color: grey;
-	text-decoration: none;
 }

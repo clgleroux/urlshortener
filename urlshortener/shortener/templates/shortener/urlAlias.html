@@ -3,20 +3,19 @@
 <html>
 
 	<head>
-
 		<title>Url - Alias</title>
-
+		{% load static %}
+		<link rel="stylesheet" type="text/css" href="{% static 'shortener/style.css' %}" />
+		<link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet">
 	</head>
 
 	<body>
-
+		<h1>UrlShortener</h1>
 		<form action="/urlAlias/" method="post">
 			{% csrf_token %}
 			{{ form }}
 			<input type="submit" value="Submit" />
 		</form>
-
-
 	</body>
 
 </html>

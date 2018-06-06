@@ -15,7 +15,7 @@ from .forms import UrlForm
 
 def error_404(request):
     data = {}
-    return render(request,'shortener/error_404.html', data)
+    return render(request,'shortener/error_404.html', data, status=404)
 
 def get_url(request):
     #import pdb; pdb.set_trace()
