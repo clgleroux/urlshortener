@@ -1,22 +1,35 @@
 <!DOCTYPE html>
-
+{% load i18n %}
+{% trans "Welcome to the UrlShotener" as the_title%}
+{% trans "Here, we can reduce your url for easy shared" as the_text%}
+{% trans "© 2018, Made With ❤ By Clement  All rights reserved." as the_footer%}
 <html>
 
 	<head>
 
-		<title>Url - Alias</title>
+		<title>Url Shortener</title>
 
 	</head>
 
 	<body>
+		<header>
+			<h1>Url Shortener</h1>
+		</header>
 
-		<form action="/" method="post">
-			{% csrf_token %}
-			{{ form }}
-			<input type="submit" value="Submit" />
-		</form>
+		<section>
+			<h2>{{ the_title }}</h2>
+			<p>{{ the_text }}</p>
 
+			<form action="/" method="post">
+				{% csrf_token %}
+				{{ form }}
+				<input type="submit" value="Submit" />
+			</form>
+		</section>
 
+		<footer>
+			<h6>{{ the_footer }}</h6>
+		</footer>
 	</body>
 
 </html>

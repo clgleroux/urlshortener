@@ -1,0 +1,30 @@
+<html>
+    <head>
+
+        <title>Url Shortener</title>
+
+    </head>
+
+    <body>
+        <header>
+			<h1>Url Shortener</h1>
+		</header>
+
+        <section>
+            <p>
+                For url : {{ your_url }}    
+            </p>
+
+            <br />
+            <script type="text/javascript">(function(){new Clipboard("#copy-button");})();</script>
+            <input id="post-shortlink" value="{{ my_url }}.{{ url.alias }}" readonly/>
+            <button class="button" id="copy-button" data-clipboard-target="#post-shortlink">Copy</button>
+        </section>
+
+        <footer>
+			<h6>
+				© 2018, Made With ❤ By Clement  All rights reserved.
+			</h6>
+		</footer>
+    </body>
+</html>

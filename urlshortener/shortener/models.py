@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 import base64
 import hashlib
+from urllib.parse import urlparse
 
 from django.db import models
 
@@ -27,3 +28,6 @@ class URL(models.Model):
 
         # Return current instance, hope it will be usefull :D
         return obj
+
+    def __str__(self):
+        return '{} - {}'.format(self.alias, urlparse(self.url).hostname)
