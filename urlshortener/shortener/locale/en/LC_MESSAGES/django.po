@@ -1,0 +1,47 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-07 14:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: shortener/forms.py:6
+msgid "Your URL"
+msgstr ""
+
+#: shortener/templates/shortener/error_404.html:5
+#: shortener/templates/shortener/error_404.html:8
+msgid "Error 404"
+msgstr ""
+
+#: shortener/templates/shortener/giveAlias.html:7
+msgid "For url:"
+msgstr ""
+
+#: shortener/templates/shortener/giveAlias.html:9
+msgid "Copy"
+msgstr ""
+
+#: shortener/templates/shortener/skeleton.html:31
+msgid "© 2018, Made With ❤ By Clement  All rights reserved."
+msgstr ""
+
+#: shortener/templates/shortener/urlAlias.html:7
+msgid "Welcome to the UrlShotener"
+msgstr ""
+
+#: shortener/templates/shortener/urlAlias.html:8
+msgid "Here, we can reduce your url for easy shared"
+msgstr ""
