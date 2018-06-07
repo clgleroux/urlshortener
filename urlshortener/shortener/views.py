@@ -14,15 +14,17 @@ from .forms import UrlForm
 
 
 def error_404(request):
+    # Error 404 Not Found
     data = {}
     return render(request, 'shortener/error_404.html', data, status=404)
 
 
 def get_url(request):
-    # import pdb; pdb.set_trace()
+
     if request.method == 'POST':
         form = UrlForm(request.POST)
         if form.is_valid():
+            # Create Alias and register
             your_url = request.POST.get('your_url', '')
             url = URL.get_or_create(your_url)
             scheme = request.is_secure() and "https" or "http"
@@ -48,5 +50,6 @@ def get_url(request):
 
 
 def get_alias(request, alias):
+    # Get alias or return 404
     foo = get_object_or_404(URL, alias=alias).url
     return redirect(foo)

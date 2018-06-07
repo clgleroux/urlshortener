@@ -1,0 +1,37 @@
+{% load i18n %}
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>{% block title %}Url Shortener{% endblock %}</title>
+	</head>
+
+	<body>
+		<header>
+			<h1>{% block header %}Url Shortener{% endblock %}</h1>
+		</header>
+
+		<section>
+            <div class="txtMajor">
+                {% block txtMajor %}
+
+                {% endblock %}
+            </div>
+
+            <div id="Form">
+                {% block form %}
+
+                {% endblock%}
+            </div>
+
+		</section>
+
+		<footer>
+			<h6>{% block footer %}{% trans "© 2018, Made With ❤ By Clement  All rights reserved." %}{% endblock %}</h6>
+		</footer>
+
+		{% block 'js' %}{% endblock %}
+	</body>
+
+</html>

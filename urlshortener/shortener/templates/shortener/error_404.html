@@ -1,18 +1,11 @@
-<!DOCTYPE html>
-
-<html>
-
-	<head>
-
-		<title>Error 404</title>
-
-	</head>
-
-	<body>
-
-		<h1>Error 404</h1>
+{% extends "skeleton.html" %}
+{% load i18n %}
 
 
-	</body>
+{% block title %}{% trans "Error 404"%}{% endblock %}
 
-</html>
+{% block header%}
+	<h1>{% trans "Error 404"%}</h1>
+{% endblock %}
+
+{% block footer %}{% endblock %}
