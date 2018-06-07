@@ -6,6 +6,7 @@ A simple service which short large url.
 
 ```
 $ make install
+$ make update
 $ make run
 ```
 
