@@ -14,8 +14,6 @@
 {% block 'js' %}
     {% compress js %}
         <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
-    {% endcompress %}
-    {% compress js %}
         <script type="text/javascript">(function(){new Clipboard("#copy-button");})();</script>
     {% endcompress %}
 {% endblock %}

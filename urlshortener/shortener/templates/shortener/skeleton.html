@@ -1,10 +1,15 @@
-{% load i18n %}
+{% load i18n static sass_tags compress %}
+
 <!DOCTYPE html>
 
 <html>
 
 	<head>
 		<title>{% block title %}Url Shortener{% endblock %}</title>
+		{% compress css %}
+		<link href="{% sass_src 'shortener/sass/main.scss' %}" rel="stylesheet" type="text/css" />
+		{% endcompress %}
+
 	</head>
 
 	<body>
@@ -31,7 +36,11 @@
 			<h6>{% block footer %}{% trans "© 2018, Made With ❤ By Clement  All rights reserved." %}{% endblock %}</h6>
 		</footer>
 
+		{% compress js %}
+		<script src="{% static 'shortener/vendor/node_modules/jquery/dist/jquery.js' %}"></script>
+		<script src="{% static 'shortener/vendor/node_modules/foundation-sites/js/foundation.core.js' %}"></script>
 		{% block 'js' %}{% endblock %}
+		{% endcompress %}
 	</body>
 
 </html>

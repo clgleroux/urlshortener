@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'shortener',
     "compressor",
+    'sass_processor',
 ]
 
 MIDDLEWARE = [
@@ -139,6 +140,10 @@ STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     'compressor.finders.CompressorFinder',
+    'sass_processor.finders.CssFinder',
+]
+SASS_PROCESSOR_INCLUDE_DIRS = [
+    os.path.join(BASE_DIR, 'shortener/static/shortener/vendor/node_modules/foundation-sites/scss'),
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 STATIC_URL = '/static/'

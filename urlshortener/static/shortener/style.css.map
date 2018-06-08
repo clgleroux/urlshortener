@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "../../home/leroux/Documents/django_demo/urlshortener/shortener/static/shortener/style.css",
+	"sources": [
+		"../../home/leroux/Documents/django_demo/urlshortener/shortener/static/shortener/style.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,EAAE,CAAC;EACC,KAAK,EAAE,IAAI,GACd"
+}
