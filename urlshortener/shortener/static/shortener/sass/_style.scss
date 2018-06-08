@@ -1,0 +1,57 @@
+h1 a {
+    color: $blue01;
+}
+
+h1 a:hover {
+    opacity: 0.5;
+}
+
+html {
+    background-color: $gray01;
+    min-height: 100vh;
+    margin: 0;
+
+}
+
+form {
+    display: flex;
+    width: 50rem;
+    margin: auto;
+}
+
+footer {
+    bottom: 0;
+    position: absolute;
+    text-align: right;
+    width: 100vw;
+    right: 4rem;
+}
+
+#form {
+    display: flex;
+    width: 50%;
+    margin: auto;
+}
+
+ul.errorlist {
+    margin-left: 0;
+}
+
+ul.errorlist li {
+    color: red;
+    list-style-type: none;
+    position: fixed;
+    background-color: black;
+    margin-left: 14rem;
+    font-size: rem-calc(16);
+    margin-top: 7px;
+    opacity: 0.8;
+}
+
+ul.errorlist li:hover {
+    opacity: 0.5;
+}
+
+ul.errorlist li:active {
+    opacity: 0;
+}

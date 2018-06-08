@@ -3,14 +3,26 @@
 @import "settings";
 @import "foundation";
 
+@include foundation-xy-grid-classes(
+  /* options
+  $base-grid: true,
+  $margin-grid: true,
+  $padding-grid: true,
+  $block-grid: true,
+  $collapse: true,
+  $offset: true,
+  $vertical-grid: true,
+  $frame-grid: true
+  */
+);
 @include foundation-typography;
-// @include foundation-forms;
-// @include foundation-button;
+@include foundation-forms;
+@include foundation-button;
 // @include foundation-accordion;
 // @include foundation-accordion-menu;
 // @include foundation-badge;
 // @include foundation-breadcrumbs;
-// @include foundation-button-group;
+@include foundation-button-group;
 // @include foundation-callout;
 // @include foundation-card;
 // @include foundation-close-button;
@@ -38,3 +50,5 @@
 // @include foundation-top-bar;
 // @include foundation-visibility-classes;
 // @include foundation-float-classes;
+
+@import 'style';

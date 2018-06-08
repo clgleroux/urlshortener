@@ -4,43 +4,45 @@
 
 <html>
 
-	<head>
-		<title>{% block title %}Url Shortener{% endblock %}</title>
-		{% compress css %}
-		<link href="{% sass_src 'shortener/sass/main.scss' %}" rel="stylesheet" type="text/css" />
-		{% endcompress %}
+<head>
+	<title>{% block title %}Url Shortener{% endblock %}</title>
+	{% compress css %}
+	<link href="{% sass_src 'shortener/sass/main.scss' %}" rel="stylesheet" type="text/css" /> {% endcompress %}
+	<meta HTTP-EQUIV="CACHE-CONTROL" content="no-Cache">
 
-	</head>
+</head>
 
-	<body>
-		<header>
-			<h1>{% block header %}Url Shortener{% endblock %}</h1>
-		</header>
+<body>
 
-		<section>
-            <div class="txtMajor">
-                {% block txtMajor %}
+	<header>
+		<div class="grid-container">
+			<div class="grid-x">
+				<h1 class="cell text-center"><a href="/">{% block header %}Url Shortener{% endblock %}</a></h1>
+			</div>
+		</div>
+	</header>
 
-                {% endblock %}
-            </div>
+	<div class="grid-container">
+		<div class="grid-x">
+			{% block txtMajor %} {% endblock %}
+		</div>
+	</div>
+	<div class="grid-container">
+		<div class="grid-x">
+			{% block form %} {% endblock%}
+		</div>
+	</div>
 
-            <div id="Form">
-                {% block form %}
+	<footer>
+		<h6>{% block footer %}{% trans "© 2018, Made With ❤ By Clement  All rights reserved." %}{% endblock %}</h6>
+	</footer>
 
-                {% endblock%}
-            </div>
 
-		</section>
 
-		<footer>
-			<h6>{% block footer %}{% trans "© 2018, Made With ❤ By Clement  All rights reserved." %}{% endblock %}</h6>
-		</footer>
-
-		{% compress js %}
-		<script src="{% static 'shortener/vendor/node_modules/jquery/dist/jquery.js' %}"></script>
-		<script src="{% static 'shortener/vendor/node_modules/foundation-sites/js/foundation.core.js' %}"></script>
-		{% block 'js' %}{% endblock %}
-		{% endcompress %}
-	</body>
+	{% compress js %}
+	<script src="{% static 'shortener/vendor/node_modules/jquery/dist/jquery.js' %}"></script>
+	<script src="{% static 'shortener/vendor/node_modules/foundation-sites/js/foundation.core.js' %}"></script>
+	{% block 'js' %}{% endblock %} {% endcompress %}
+</body>
 
 </html>

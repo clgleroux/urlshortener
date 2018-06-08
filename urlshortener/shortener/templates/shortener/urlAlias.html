@@ -1,19 +1,22 @@
-{% extends "skeleton.html" %}
-{% load i18n %}
+{% extends "skeleton.html" %} {% load i18n %}
 
 <!-- HEADER -->
 
 {% block txtMajor %}
-	<h2>{% trans "Welcome to the UrlShotener" %}</h2>
-	<p>{% trans "Here, we can reduce your url for easy shared" %}</p>
+<h2 class="cell text-center">{% trans "Welcome to the UrlShotener" %}</h2>
+<p class="cell text-center">{% trans "Here, we can reduce your url for easy shared" %}</p>
 {% endblock %}
-
 {% block form %}
-	<form action="/" method="post">
+<div class="cell">
+	<form action="/" method="post" autocomplete="off">
 		{% csrf_token %}
-		{{ form }}
-		<input type="submit" value="Submit" />
+		<span class="input-group-label">{% trans "Your URL" %}</span> {{ form }}
+		<div class="input-group-button">
+			<input type="submit" class="button" value={% trans "Submit" %}>
+		</div>
 	</form>
+</div>
+
 {% endblock%}
 
 <!-- FOOTER -->

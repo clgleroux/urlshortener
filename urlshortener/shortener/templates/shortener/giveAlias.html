@@ -1,19 +1,26 @@
 {% extends "skeleton.html" %}
 {% load i18n %}
-{% load compress %}
+
 
 <!-- HEADER -->
 
 {% block txtMajor %}
-    <div> {% trans "For url:" %} {{ your_url }} </div>
-    <input id="post-shortlink" value="{{ my_url }}/{{ url.alias }}" readonly/>
-    <button class="button" id="copy-button" data-clipboard-target="#post-shortlink">{% trans "Copy" %}</button>
+    <div class="cell text-center"> {% trans "For url:" %} {{ your_url }} </div>
+{% endblock %}
+{% block form %}
+    <div class="input-group cell text-center">
+        <div id="form">
+            <input type="text" class="input-group-field" id="post-shortlink" value="{{ my_url }}/{{ url.alias }}" readonly/>
+            <div class="input-group-button">
+                <button class="button" id="copy-button" data-clipboard-target="#post-shortlink">{% trans "Copy" %}</button>
+            </div>
+        </div>
+    </div>
+
 {% endblock %}
 
 <!-- FOOTER -->
 {% block 'js' %}
-    {% compress js %}
-        <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
-        <script type="text/javascript">(function(){new Clipboard("#copy-button");})();</script>
-    {% endcompress %}
+    <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
+    <script type="text/javascript">(function(){new Clipboard("#copy-button");})();</script>
 {% endblock %}
