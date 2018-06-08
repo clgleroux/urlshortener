@@ -5,7 +5,7 @@
 <!-- HEADER -->
 
 {% block txtMajor %}
-    <div class="cell text-center"> {% trans "For url:" %} {{ your_url }} </div>
+    <div class="cell text-center"> {% trans "For url:" %}<a href="{{ your_url }}"> {{ your_url }}</a> </div>
 {% endblock %}
 {% block form %}
     <div class="input-group cell text-center">

@@ -2334,12 +2334,6 @@ a.button:hover, a.button:focus {
         display: block;
         margin-right: 0; } }
 
-h1 a {
-  color: #6666FF; }
-
-h1 a:hover {
-  opacity: 0.5; }
-
 html {
   background-color: #e5e5e5;
   min-height: 100vh;
@@ -2357,10 +2351,20 @@ footer {
   width: 100vw;
   right: 4rem; }
 
+h1 {
+  margin-bottom: 3%; }
+
+h1 a {
+  color: #6666FF; }
+
+h1 a:hover {
+  opacity: 0.5; }
+
 #form {
   display: flex;
-  width: 50%;
-  margin: auto; }
+  width: 25%;
+  margin: auto;
+  margin-top: 5%; }
 
 ul.errorlist {
   margin-left: 0; }
@@ -2369,7 +2373,7 @@ ul.errorlist li {
   color: red;
   list-style-type: none;
   position: fixed;
-  background-color: black;
+  background-color: #e5e5e5;
   margin-left: 14rem;
   font-size: 1rem;
   margin-top: 7px;

@@ -8,6 +8,7 @@
 	<title>{% block title %}Url Shortener{% endblock %}</title>
 	{% compress css %}
 	<link href="{% sass_src 'shortener/sass/main.scss' %}" rel="stylesheet" type="text/css" /> {% endcompress %}
+	<link rel="shortcut icon" href="{% static 'shortener/favicon.ico' type='image/x-icon' %}">
 	<meta HTTP-EQUIV="CACHE-CONTROL" content="no-Cache">
 
 </head>
@@ -17,7 +18,7 @@
 	<header>
 		<div class="grid-container">
 			<div class="grid-x">
-				<h1 class="cell text-center"><a href="/">{% block header %}Url Shortener{% endblock %}</a></h1>
+				<h1 class="cell text-center">{% block header %}<a href="/">Url Shortener</a>{% endblock %}</h1>
 			</div>
 		</div>
 	</header>

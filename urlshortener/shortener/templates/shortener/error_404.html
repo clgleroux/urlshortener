@@ -5,7 +5,11 @@
 {% block title %}{% trans "Error 404"%}{% endblock %}
 
 {% block header%}
-	<h1>{% trans "Error 404"%}</h1>
+	<h1 class="cell text-center">{% trans "Error 404"%}</h1>
+{% endblock %}
+
+{% block txtMajor %}
+	<h2 class="cell text-center"><a href="/">Go back to home</a></h2>
 {% endblock %}
 
 {% block footer %}{% endblock %}
