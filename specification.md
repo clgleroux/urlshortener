@@ -72,7 +72,7 @@ ________                          _______________                             __
 ```
 
 
-## Diagrame de classes
+## Definition de classes
 
 Définir les models de données avec leur champs et attributs, ainsi qu'éventulement leur methodes
 
@@ -83,7 +83,7 @@ Attributes:
 - url : textField
 - alias : charField [PK, maxLength = 4]
 
-Methode de Classe : 
+Methode de Classe :
 
 - `get_or_create` (permet de creer et d'ajouter le hash si besoin)
 
@@ -95,7 +95,7 @@ Définir les points d'entrées de l'application :
 ### Creation d'une nouvelle url racourcis
 
 - HTTP Verb : POST
-- Endpoint : `/new`
+- Endpoint : `/`
 - Payload parameter :
 	- url:String
 
