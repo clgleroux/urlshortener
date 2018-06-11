@@ -1,4 +1,5 @@
 from django import forms
+from django.utils.translation import gettext_lazy as _
 
 
 class UrlForm(forms.Form):
@@ -6,5 +7,6 @@ class UrlForm(forms.Form):
         label='',
         max_length=2000,
         widget=forms.URLInput(attrs={
-            'class': 'input-group-field'
+            'class': 'input-group-field',
+            'placeholder': _('Insert your URL here'),
             }))

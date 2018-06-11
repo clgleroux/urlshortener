@@ -1,4 +1,5 @@
-{% extends "skeleton.html" %} {% load i18n %}
+{% extends "skeleton.html" %}
+{% load i18n %}
 
 <!-- HEADER -->
 
@@ -10,7 +11,7 @@
 <div class="cell">
 	<form action="/" method="post" autocomplete="off">
 		{% csrf_token %}
-		<span class="input-group-label">{% trans "Your URL" %}</span> {{ form }}
+		{{ form }}
 		<div class="input-group-button">
 			<input type="submit" class="button" value={% trans "Submit" %}>
 		</div>

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-08 13:35+0000\n"
+"POT-Creation-Date: 2018-06-11 08:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,10 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: shortener/forms.py:8
+msgid "Insert your URL here"
+msgstr ""
 
 #: shortener/templates/shortener/error_404.html:5
 #: shortener/templates/shortener/error_404.html:8
@@ -30,22 +34,18 @@ msgstr ""
 msgid "Copy"
 msgstr ""
 
-#: shortener/templates/shortener/skeleton.html:37
+#: shortener/templates/shortener/skeleton.html:38
 msgid "© 2018, Made With ❤ By Clement  All rights reserved."
 msgstr ""
 
-#: shortener/templates/shortener/urlAlias.html:6
+#: shortener/templates/shortener/urlAlias.html:7
 msgid "Welcome to the UrlShotener"
 msgstr ""
 
-#: shortener/templates/shortener/urlAlias.html:7
+#: shortener/templates/shortener/urlAlias.html:8
 msgid "Here, we can reduce your url for easy shared"
 msgstr ""
 
-#: shortener/templates/shortener/urlAlias.html:13
-msgid "Your URL"
-msgstr ""
-
-#: shortener/templates/shortener/urlAlias.html:15
+#: shortener/templates/shortener/urlAlias.html:16
 msgid "Submit"
 msgstr ""
