@@ -1,8 +1,10 @@
 from django import forms
 from django.utils.translation import gettext_lazy as _
 
+from .models import URL
 
-class UrlForm(forms.Form):
+
+class URLForm(forms.Form):
     your_url = forms.URLField(
         label='',
         max_length=2000,
@@ -10,3 +12,6 @@ class UrlForm(forms.Form):
             'class': 'input-group-field',
             'placeholder': _('Insert your URL here'),
             }))
+
+    def save(self, *args, **kwargs):
+        return URL.get_or_create(self.cleaned_data['your_url'])

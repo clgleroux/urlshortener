@@ -10,7 +10,7 @@ from .models import URL
 from django.http import HttpRequest
 
 
-from .forms import UrlForm
+from .forms import URLForm
 
 
 def error_404(request):
@@ -22,18 +22,16 @@ def error_404(request):
 def get_url(request):
 
     if request.method == 'POST':
-        form = UrlForm(request.POST)
+        form = URLForm(request.POST)
         if form.is_valid():
             # Create Alias and register
-            your_url = request.POST.get('your_url', '')
-            url = URL.get_or_create(your_url)
+            url = form.save()
             scheme = request.is_secure() and "https" or "http"
             return render(
                 request,
                 'giveAlias.html',
                 {
                     'url': url,
-                    'your_url': your_url,
                     'my_url': scheme + '://' + HttpRequest.get_host(request)},
                 status=201)
         else:
@@ -44,7 +42,7 @@ def get_url(request):
                 status=400)
 
     else:
-        form = UrlForm()
+        form = URLForm()
 
     return render(request, 'shortener/urlAlias.html', {'form': form})
 
