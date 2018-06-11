@@ -20,7 +20,3 @@ $ make run
 ```
 $ make test
 ```
-
-## Use
-
-Insert your url in form. Paste ce new irl and share.
