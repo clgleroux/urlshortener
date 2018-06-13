@@ -146,8 +146,8 @@ STATICFILES_FINDERS = [
 SASS_PROCESSOR_INCLUDE_DIRS = [
     os.path.join(
                 BASE_DIR,
-                'shortener/static/shortener/vendor/'
-                'node_modules/foundation-sites/scss'),
+                *'shortener/static/shortener/vendor/'
+                'node_modules/foundation-sites/scss'.split('/')),
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 STATIC_URL = '/static/'
